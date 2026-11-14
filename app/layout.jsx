@@ -1,8 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
-import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'House of Ideas',
   description: 'Welcome to House of Ideas — a place to imagine more.',
   generator: 'v0.app',
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
   },
 }
 
-export const viewport: Viewport = {
+export const viewport = {
   colorScheme: 'light dark',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
@@ -33,11 +32,7 @@ export const viewport: Viewport = {
   ],
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="antialiased">
