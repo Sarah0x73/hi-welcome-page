@@ -100,9 +100,27 @@ body {
   background-color: var(--background);
   background-image: radial-gradient(ellipse at 50% 48%, #402073 0%, var(--background) 74%);
 }
+.welcome-page::before {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-color: #311463;
+  opacity: .2;
+  animation: background-shift 8s ease-in-out infinite;
+}
+@keyframes background-shift {
+  0%, 100% { background-color: #311463; }
+  25% { background-color: #744cac; }
+  50% { background-color: #3b1c70; }
+  75% { background-color: #825bb7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .welcome-page { animation: none; }
+}
 .idea-light {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: 50%;
   left: 50%;
   width: min(70vw, 440px);
@@ -127,8 +145,8 @@ body {
 }
 .brand-logo {
   display: block;
-  width: 68px;
-  height: 68px;
+  width: clamp(108px, 14vw, 172px);
+  height: auto;
   object-fit: contain;
 }
 .header-note, .hero-kicker, .site-footer, .instagram-link {

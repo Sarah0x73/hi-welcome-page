@@ -11,7 +11,7 @@ export default function Page() {
       </div>
       <header className="site-header" aria-label="House of Ideas">
         <a className="brand-mark" href="#home" aria-label="House of Ideas home">
-          <Image className="brand-logo" src="/house-of-ideas-logo.png" alt="House of Ideas" width={68} height={76} priority />
+          <Image className="brand-logo" src="/house-of-ideas-logo.png" alt="House of Ideas" width={4096} height={4587} sizes="(max-width: 560px) 108px, 172px" priority />
         </a>
       </header>
 
