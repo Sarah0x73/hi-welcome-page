@@ -1,11 +1,18 @@
+import Image from 'next/image'
+
 export default function Page() {
   return (
     <main className="welcome-page">
+      <div className="idea-light" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M9 18h6M10 21h4m-2-20a7 7 0 0 0-4.4 12.45c.8.64 1.4 1.52 1.4 2.55h6c0-1.03.6-1.91 1.4-2.55A7 7 0 0 0 12 1Z" />
+          <path d="M12 5v3m-5-1 2 2m8-2-2 2" />
+        </svg>
+      </div>
       <header className="site-header" aria-label="House of Ideas">
         <a className="brand-mark" href="#home" aria-label="House of Ideas home">
-          <span>H</span><span className="brand-i">I</span>
+          <Image className="brand-logo" src="/house-of-ideas-logo.png" alt="House of Ideas" width={4096} height={4587} sizes="(max-width: 560px) 108px, 172px" priority />
         </a>
-        <span className="header-note">CREATIVE THINKING, BIG IDEAS</span>
       </header>
 
       <section className="hero" id="home" aria-labelledby="welcome-title">
@@ -17,7 +24,7 @@ export default function Page() {
       <footer className="site-footer">
         <a
           className="instagram-link"
-          href="https://www.instagram.com/houseofideas/"
+          href="https://instagram.com/houseofideas_club"
           target="_blank"
           rel="noreferrer"
           aria-label="Visit House of Ideas on Instagram (opens in a new tab)"
